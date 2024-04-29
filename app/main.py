@@ -1,4 +1,5 @@
 class Car:
+
     def __init__(self, comfort_class: int, clean_mark: int, brand: str) -> None:  # noqa: E501
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
@@ -6,6 +7,7 @@ class Car:
 
 
 class CarWashStation:
+
     def __init__(
         self,
         distance_from_city_center: float,
@@ -43,17 +45,3 @@ class CarWashStation:
             1
         )
         self.count_of_ratings += 1
-
-
-# Test the classes
-bmw = Car(comfort_class=3, clean_mark=3, brand="BMW")
-audi = Car(comfort_class=4, clean_mark=9, brand="Audi")
-
-wash_station = CarWashStation(
-    distance_from_city_center=5,
-    clean_power=6,
-    average_rating=3.5,
-    count_of_ratings=6
-)
-
-income = wash_station.serve_cars([bmw, audi])
